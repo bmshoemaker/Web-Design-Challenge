@@ -3,32 +3,58 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Latitude</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="tyles.css">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <main>
-    <h1 class="visually-hidden">Latitude</h1>
-  
-    <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          <span class="fs-4">Summary: Latitude vs. X</span>
-        </a>
-  
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Plots</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Comparison</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Data</a></li>
-        </ul>
-      </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Latitude</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">City Latitude vs Max Temperature</a>
+            <a class="dropdown-item" href="#">City Latitude vs Humidity</a>
+            <a class="dropdown-item" href="#">City Latitude vs Cloudiness</a>
+            <a class="dropdown-item" href="#">City Latitude vs WindSpeed</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Comparison <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Data</a>
+        </li>
+      </ul>
     </div>
-  </main>
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Summary: Latitude vs X</h1>
+      <img src='https://github.com/bmshoemaker/Web-Design-Challenge/blob/main/WebVisualizations/Resources/assets/images/Fig1.png?raw=true' width="200"  alt='home_graph'/>
+      <p>The purpose of this project was to analyze how weather changes </br>
+        as you get closer to the equator. To accomplish this analysis, we </br>
+        first pulled data from the OpenWeatherMap API to assemble a </br>
+        dataset on over 500 cities</p>
+      <p>After assembling the dataset, we used Matplotlib to plot various </br>
+        aspects of the weather vs. latitude. Factors we looked at included: </br>
+        temperature, cloudiness, wind speed, and humidity. This site provides the source data and </br>
+        visualizations created as part of the analysis, as well as explanations and descriptions of any </br>
+        trends and correlations we witnessed.</p>
+    </div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 
